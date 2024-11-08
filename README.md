@@ -31,3 +31,7 @@ $ rails server
 - password: password
 
 ### Try out the liking feature!
+
+https://github.com/user-attachments/assets/d3f49d54-0f93-4506-8987-15ef49cb463e
+
+
