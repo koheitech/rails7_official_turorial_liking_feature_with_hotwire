@@ -1,35 +1,33 @@
-# Ruby on Rails チュートリアルのサンプルアプリケーション
+# Ruby on Rails7 Official Tutorial + Liking feature with Hotwire/Turbo
 
-これは、次の教材で作られたサンプルアプリケーションです。
-[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-（第7版）
-[Michael Hartl](https://www.michaelhartl.com/) 著
+This repo implements liking feature with Hotwire's Turbo into rails7 official tutorial's sample app.
 
-## ライセンス
+based on: https://github.com/yasslab/sample_apps/tree/main/7_0/ch14
 
-[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
-ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
-詳細は [LICENSE.md](LICENSE.md) をご覧ください。
+ref:
+- https://railstutorial.jp/
+- https://www.michaelhartl.com/
 
-## 使い方
 
-このアプリケーションを動かす場合は、まずはリポジトリをフォークしてください。
+## How to demo
 
-フォークしたリポジトリで、「Code」から「Codespaces」タブに移動し、
-「Create codespace on main」をクリックすると環境構築がスタートします。
-Railsサーバーが立ち上がり、シンプルブラウザが表示されるまでしばらくお待ちください。
-
-次に、データベースへのマイグレーションを実行します。
-
+### Migrating DB
 ```
 $ rails db:migrate
 ```
 
-最後に、テストを実行してうまく動いているかどうか確認してください。
-
+### Seeding DB
 ```
-$ rails test
+$ rails db:seed
 ```
 
-詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-を参考にしてください。
+### Starting up the server
+```
+$ rails server
+```
+
+### Logging into the app with following demo credentials:
+- mail: example-1@railstutorial.org
+- password: password
+
+### Try out the liking feature!
