@@ -14,4 +14,11 @@
                                                turbo_confirm: "You sure?" } %>
     <% end %>
   </span>
+  <% if logged_in? %>
+    <% if current_user.liked_microposts.include?(micropost) %>
+      <%= button_to 'Unlike', unlike_micropost_path(micropost), method: :delete %>
+    <% else %>
+      <%= button_to 'Like', like_micropost_path(micropost), method: :post %>
+    <% end %>
+  <% end %>
 </li>
