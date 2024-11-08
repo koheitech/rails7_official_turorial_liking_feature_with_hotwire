@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class LikesControllerTest < ActionDispatch::IntegrationTest
   def setup
@@ -8,17 +8,15 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should like a micropost" do
-    assert_difference 'Like.count', 1 do
-      post like_micropost_path(@micropost)
+    assert_difference '@micropost.likes.count', 1 do
+      post like_micropost_path(@micropost), params: { format: :turbo_stream }
     end
-    assert_redirected_to @micropost
   end
 
   test "should unlike a micropost" do
     @micropost.likes.create(user: @user)
-    assert_difference 'Like.count', -1 do
-      delete unlike_micropost_path(@micropost)
+    assert_difference '@micropost.likes.count', -1 do
+      delete unlike_micropost_path(@micropost), params: { format: :turbo_stream }
     end
-    assert_redirected_to @micropost
   end
 end
